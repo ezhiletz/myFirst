@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Поль Ядзодуки</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="http://faviconka.ru/ico/faviconka_ru_2069.gif"/>
+  <script type="text/javascript">
+  var correctAnswersCount;
+  function askQuestion(textBoxId, answer) {
+      var userAnswer = document.getElementById(textBoxId).value;
+      if (userAnswer == answer) {
+          correctAnswersCount++;
+      }
+  }
+
+  function playPuzzle() {
+      correctAnswersCount = 0;
+      askQuestion("answerOne", 5);
+      askQuestion("answerTwo", 3);
+      alert("Вы угадали: " + correctAnswersCount + " загадок.");
+  }
+  </script>
+  </head>
+<body>
+  <div id="header">
+      <a id="selected" href="index.html">Главная</a><span>/</span>
+      <a href="#">Загадки</a><span>/</span>
+      <a href="triple.html">Угадайка Мультиплеер</a><span>/</span>
+  </div>
+
+<h1>Начинаем играть!</h1>
+<div id="content">
+  <div id="box">   
+    <p>Мышь считает дырки в сыре: три плюс два, всего ...</p>
+    <input type="text" id="answerOne"><br>
+    <p>Под деревом четыре льва, один ушел, осталось ...</p>
+    <input type="text"  id="answerTwo"><br>
+    <p>Запомните! Используйте только цифры!</p>
+    <a href="#" onclick="playPuzzle()">Проверить ответ</a>
+<div class="clear"></div>
+   </div> 
+ </div>
+
+
+<div id="footer">
+  <div id="media">
+  			<a href="https://facebook.com/polina.filimonova.9" target="_blank"><img src="FB.png"></a>
+  			<a href="https://vk.com/id3797201" target="_blank"><img src="vkont.png"></a>
+  </div>
+  <a href="http://api.hostinger.ru/redir/20570135"> | Партнерская программа |</a>
+Copyright © 2016 <a href="https://geekbrains.ru/">GeekBrains</a>
+</div>
+</body>
+</html>

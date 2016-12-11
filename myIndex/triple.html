@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Поль Ядзодуки</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="http://faviconka.ru/ico/faviconka_ru_2069.gif"/>
+  <script type="text/javascript">
+  function playGuess2() {
+      var answer = parseInt(Math.random() * 100);
+      var playerNum = 1;
+
+      while (true) {
+          var userAnswer = prompt('Ходит игрок ' + playerNum + '. Для выхода нажмите q.');
+          if (userAnswer == 'q') {
+              break;
+          }
+          userAnswer = parseInt(userAnswer);
+
+          if (userAnswer > answer) {
+              alert('Ваше число слишком большое');
+          } else if (userAnswer < answer) {
+              alert('Ваше число слишком маленькое');
+          } else if (userAnswer == answer) {
+              alert('Вы угадали! Выиграл игрок: ' + playerNum);
+              break;
+          } else {
+              alert('Необходимо ввести число!');
+          }
+
+          if (playerNum == 1) {
+              playerNum = 2;
+          } else {
+              playerNum = 1;
+          }
+      }
+  }
+  </script>
+  </head>
+  <body>
+
+          <div id="header">
+              <a href="index.html">Главная</a> <span>/</span>
+              <a href="double.html">Загадки</a> <span>/</span>
+              <a href="#">Угадайка мультиплеер</a>
+          </div>
+          <h1></h1>
+          <div id="content">
+              <div id="box">
+                <h2>Угадайка мультиплеер</h2>
+                  <p><u>Правила:</u></p><br>
+                  <p>Игра рассчитана на двух игроков.</br>
+                   Компьютер загадывает число от 0 до 100, которое вам необходимо угадать. У вас  будет неограниченное количество попыток.
+                  Побеждает тот, кто первым назовет загаданное компьютером число. Удачи!</p>
+                  <br><br>
+                  <a href="#" onclick="playGuess2();">Играть!</a>
+                  <div class="clear"></div>
+                  <p>Продолжение следует...<img src="happy.png"></p>
+              </div>
+          </div>
+<p>А <a href="#" onclick="click">тут </a> мой другой сайт</p>
+<script type="text/javascript">
+document.querySelector("click").onclick = function() {
+
+  alert("Ха-ха! Но он пока не работает!");
+}
+</script>
+<script type="text/javascript">
+var myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+    var mySrc = myImage.getAttribute('src');
+    if(mySrc === 'happy.png') {
+      myImage.setAttribute ('src','happy_tongue.png');
+    } else {
+      myImage.setAttribute ('src','happy.png');
+    }
+}
+
+</script>
+
+      <div id="footer">
+        <div id="media">
+        			<a href="https://facebook.com/polina.filimonova.9" target="_blank"><img src="FB.png"></a>
+        			<a href="https://vk.com/id3797201" target="_blank"><img src="vkont.png"></a>
+        </div>
+        Copyright © 2016 <a href="https://geekbrains.ru/" target="_blank">GeekBrains</a>
+      </div>
+</body>
+</html>
